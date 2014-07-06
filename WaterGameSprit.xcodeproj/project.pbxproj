@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D4679701969E6D800B142B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D46796F1969E6D800B142B5 /* Foundation.framework */; };
+		3D4679721969E6D800B142B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4679711969E6D800B142B5 /* CoreGraphics.framework */; };
+		3D4679741969E6D800B142B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4679731969E6D800B142B5 /* UIKit.framework */; };
+		3D4679761969E6D800B142B5 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4679751969E6D800B142B5 /* SpriteKit.framework */; };
+		3D46797C1969E6D800B142B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D46797A1969E6D800B142B5 /* InfoPlist.strings */; };
+		3D46797E1969E6D800B142B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D46797D1969E6D800B142B5 /* main.m */; };
+		3D4679821969E6D800B142B5 /* DHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4679811969E6D800B142B5 /* DHAppDelegate.m */; };
+		3D4679851969E6D800B142B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4679831969E6D800B142B5 /* Main.storyboard */; };
+		3D4679881969E6D800B142B5 /* DHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4679871969E6D800B142B5 /* DHViewController.m */; };
+		3D46798B1969E6D800B142B5 /* DHMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D46798A1969E6D800B142B5 /* DHMyScene.m */; };
+		3D46798D1969E6D800B142B5 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D46798C1969E6D800B142B5 /* Spaceship.png */; };
+		3D46798F1969E6D800B142B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D46798E1969E6D800B142B5 /* Images.xcassets */; };
+		3D4679961969E6D800B142B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4679951969E6D800B142B5 /* XCTest.framework */; };
+		3D4679971969E6D800B142B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D46796F1969E6D800B142B5 /* Foundation.framework */; };
+		3D4679981969E6D800B142B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4679731969E6D800B142B5 /* UIKit.framework */; };
+		3D4679A01969E6D800B142B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D46799E1969E6D800B142B5 /* InfoPlist.strings */; };
+		3D4679A21969E6D800B142B5 /* WaterGameSpritTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4679A11969E6D800B142B5 /* WaterGameSpritTests.m */; };
+		3D4679AC1969E81900B142B5 /* ring.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4679AB1969E81900B142B5 /* ring.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D4679991969E6D800B142B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D4679641969E6D800B142B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D46796B1969E6D800B142B5;
+			remoteInfo = WaterGameSprit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D46796C1969E6D800B142B5 /* WaterGameSprit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterGameSprit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D46796F1969E6D800B142B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D4679711969E6D800B142B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3D4679731969E6D800B142B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3D4679751969E6D800B142B5 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		3D4679791969E6D800B142B5 /* WaterGameSprit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WaterGameSprit-Info.plist"; sourceTree = "<group>"; };
+		3D46797B1969E6D800B142B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D46797D1969E6D800B142B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D46797F1969E6D800B142B5 /* WaterGameSprit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaterGameSprit-Prefix.pch"; sourceTree = "<group>"; };
+		3D4679801969E6D800B142B5 /* DHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHAppDelegate.h; sourceTree = "<group>"; };
+		3D4679811969E6D800B142B5 /* DHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHAppDelegate.m; sourceTree = "<group>"; };
+		3D4679841969E6D800B142B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D4679861969E6D800B142B5 /* DHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHViewController.h; sourceTree = "<group>"; };
+		3D4679871969E6D800B142B5 /* DHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHViewController.m; sourceTree = "<group>"; };
+		3D4679891969E6D800B142B5 /* DHMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHMyScene.h; sourceTree = "<group>"; };
+		3D46798A1969E6D800B142B5 /* DHMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHMyScene.m; sourceTree = "<group>"; };
+		3D46798C1969E6D800B142B5 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		3D46798E1969E6D800B142B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3D4679941969E6D800B142B5 /* WaterGameSpritTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterGameSpritTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4679951969E6D800B142B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3D46799D1969E6D800B142B5 /* WaterGameSpritTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WaterGameSpritTests-Info.plist"; sourceTree = "<group>"; };
+		3D46799F1969E6D800B142B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D4679A11969E6D800B142B5 /* WaterGameSpritTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterGameSpritTests.m; sourceTree = "<group>"; };
+		3D4679AB1969E81900B142B5 /* ring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ring.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D4679691969E6D800B142B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4679721969E6D800B142B5 /* CoreGraphics.framework in Frameworks */,
+				3D4679741969E6D800B142B5 /* UIKit.framework in Frameworks */,
+				3D4679761969E6D800B142B5 /* SpriteKit.framework in Frameworks */,
+				3D4679701969E6D800B142B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4679911969E6D800B142B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4679961969E6D800B142B5 /* XCTest.framework in Frameworks */,
+				3D4679981969E6D800B142B5 /* UIKit.framework in Frameworks */,
+				3D4679971969E6D800B142B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D4679631969E6D800B142B5 = {
+			isa = PBXGroup;
+			children = (
+				3D4679771969E6D800B142B5 /* WaterGameSprit */,
+				3D46799B1969E6D800B142B5 /* WaterGameSpritTests */,
+				3D46796E1969E6D800B142B5 /* Frameworks */,
+				3D46796D1969E6D800B142B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D46796D1969E6D800B142B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D46796C1969E6D800B142B5 /* WaterGameSprit.app */,
+				3D4679941969E6D800B142B5 /* WaterGameSpritTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D46796E1969E6D800B142B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D46796F1969E6D800B142B5 /* Foundation.framework */,
+				3D4679711969E6D800B142B5 /* CoreGraphics.framework */,
+				3D4679731969E6D800B142B5 /* UIKit.framework */,
+				3D4679751969E6D800B142B5 /* SpriteKit.framework */,
+				3D4679951969E6D800B142B5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D4679771969E6D800B142B5 /* WaterGameSprit */ = {
+			isa = PBXGroup;
+			children = (
+				3D4679801969E6D800B142B5 /* DHAppDelegate.h */,
+				3D4679811969E6D800B142B5 /* DHAppDelegate.m */,
+				3D4679831969E6D800B142B5 /* Main.storyboard */,
+				3D4679861969E6D800B142B5 /* DHViewController.h */,
+				3D4679871969E6D800B142B5 /* DHViewController.m */,
+				3D4679891969E6D800B142B5 /* DHMyScene.h */,
+				3D46798A1969E6D800B142B5 /* DHMyScene.m */,
+				3D4679AB1969E81900B142B5 /* ring.png */,
+				3D46798C1969E6D800B142B5 /* Spaceship.png */,
+				3D46798E1969E6D800B142B5 /* Images.xcassets */,
+				3D4679781969E6D800B142B5 /* Supporting Files */,
+			);
+			path = WaterGameSprit;
+			sourceTree = "<group>";
+		};
+		3D4679781969E6D800B142B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D4679791969E6D800B142B5 /* WaterGameSprit-Info.plist */,
+				3D46797A1969E6D800B142B5 /* InfoPlist.strings */,
+				3D46797D1969E6D800B142B5 /* main.m */,
+				3D46797F1969E6D800B142B5 /* WaterGameSprit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D46799B1969E6D800B142B5 /* WaterGameSpritTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D4679A11969E6D800B142B5 /* WaterGameSpritTests.m */,
+				3D46799C1969E6D800B142B5 /* Supporting Files */,
+			);
+			path = WaterGameSpritTests;
+			sourceTree = "<group>";
+		};
+		3D46799C1969E6D800B142B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D46799D1969E6D800B142B5 /* WaterGameSpritTests-Info.plist */,
+				3D46799E1969E6D800B142B5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D46796B1969E6D800B142B5 /* WaterGameSprit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4679A51969E6D800B142B5 /* Build configuration list for PBXNativeTarget "WaterGameSprit" */;
+			buildPhases = (
+				3D4679681969E6D800B142B5 /* Sources */,
+				3D4679691969E6D800B142B5 /* Frameworks */,
+				3D46796A1969E6D800B142B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaterGameSprit;
+			productName = WaterGameSprit;
+			productReference = 3D46796C1969E6D800B142B5 /* WaterGameSprit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D4679931969E6D800B142B5 /* WaterGameSpritTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4679A81969E6D800B142B5 /* Build configuration list for PBXNativeTarget "WaterGameSpritTests" */;
+			buildPhases = (
+				3D4679901969E6D800B142B5 /* Sources */,
+				3D4679911969E6D800B142B5 /* Frameworks */,
+				3D4679921969E6D800B142B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D46799A1969E6D800B142B5 /* PBXTargetDependency */,
+			);
+			name = WaterGameSpritTests;
+			productName = WaterGameSpritTests;
+			productReference = 3D4679941969E6D800B142B5 /* WaterGameSpritTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D4679641969E6D800B142B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DH;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = AhmedHamdy;
+				TargetAttributes = {
+					3D4679931969E6D800B142B5 = {
+						TestTargetID = 3D46796B1969E6D800B142B5;
+					};
+				};
+			};
+			buildConfigurationList = 3D4679671969E6D800B142B5 /* Build configuration list for PBXProject "WaterGameSprit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D4679631969E6D800B142B5;
+			productRefGroup = 3D46796D1969E6D800B142B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D46796B1969E6D800B142B5 /* WaterGameSprit */,
+				3D4679931969E6D800B142B5 /* WaterGameSpritTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D46796A1969E6D800B142B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D46797C1969E6D800B142B5 /* InfoPlist.strings in Resources */,
+				3D4679AC1969E81900B142B5 /* ring.png in Resources */,
+				3D46798F1969E6D800B142B5 /* Images.xcassets in Resources */,
+				3D46798D1969E6D800B142B5 /* Spaceship.png in Resources */,
+				3D4679851969E6D800B142B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4679921969E6D800B142B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4679A01969E6D800B142B5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D4679681969E6D800B142B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4679821969E6D800B142B5 /* DHAppDelegate.m in Sources */,
+				3D4679881969E6D800B142B5 /* DHViewController.m in Sources */,
+				3D46798B1969E6D800B142B5 /* DHMyScene.m in Sources */,
+				3D46797E1969E6D800B142B5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4679901969E6D800B142B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4679A21969E6D800B142B5 /* WaterGameSpritTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D46799A1969E6D800B142B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D46796B1969E6D800B142B5 /* WaterGameSprit */;
+			targetProxy = 3D4679991969E6D800B142B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D46797A1969E6D800B142B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D46797B1969E6D800B142B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D4679831969E6D800B142B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D4679841969E6D800B142B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D46799E1969E6D800B142B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D46799F1969E6D800B142B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D4679A31969E6D800B142B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3D4679A41969E6D800B142B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D4679A61969E6D800B142B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WaterGameSprit/WaterGameSprit-Prefix.pch";
+				INFOPLIST_FILE = "WaterGameSprit/WaterGameSprit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3D4679A71969E6D800B142B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WaterGameSprit/WaterGameSprit-Prefix.pch";
+				INFOPLIST_FILE = "WaterGameSprit/WaterGameSprit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3D4679A91969E6D800B142B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WaterGameSprit.app/WaterGameSprit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WaterGameSprit/WaterGameSprit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WaterGameSpritTests/WaterGameSpritTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3D4679AA1969E6D800B142B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WaterGameSprit.app/WaterGameSprit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WaterGameSprit/WaterGameSprit-Prefix.pch";
+				INFOPLIST_FILE = "WaterGameSpritTests/WaterGameSpritTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D4679671969E6D800B142B5 /* Build configuration list for PBXProject "WaterGameSprit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4679A31969E6D800B142B5 /* Debug */,
+				3D4679A41969E6D800B142B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D4679A51969E6D800B142B5 /* Build configuration list for PBXNativeTarget "WaterGameSprit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4679A61969E6D800B142B5 /* Debug */,
+				3D4679A71969E6D800B142B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3D4679A81969E6D800B142B5 /* Build configuration list for PBXNativeTarget "WaterGameSpritTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4679A91969E6D800B142B5 /* Debug */,
+				3D4679AA1969E6D800B142B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D4679641969E6D800B142B5 /* Project object */;
+}
