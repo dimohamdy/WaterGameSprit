@@ -25,6 +25,7 @@
 		3D4679A01969E6D800B142B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D46799E1969E6D800B142B5 /* InfoPlist.strings */; };
 		3D4679A21969E6D800B142B5 /* WaterGameSpritTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4679A11969E6D800B142B5 /* WaterGameSpritTests.m */; };
 		3D4679AC1969E81900B142B5 /* ring.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4679AB1969E81900B142B5 /* ring.png */; };
+		3D4679AE196B071F00B142B5 /* push.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4679AD196B071F00B142B5 /* push.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		3D46799F1969E6D800B142B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D4679A11969E6D800B142B5 /* WaterGameSpritTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterGameSpritTests.m; sourceTree = "<group>"; };
 		3D4679AB1969E81900B142B5 /* ring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ring.png; sourceTree = "<group>"; };
+		3D4679AD196B071F00B142B5 /* push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				3D4679871969E6D800B142B5 /* DHViewController.m */,
 				3D4679891969E6D800B142B5 /* DHMyScene.h */,
 				3D46798A1969E6D800B142B5 /* DHMyScene.m */,
+				3D4679AD196B071F00B142B5 /* push.png */,
 				3D4679AB1969E81900B142B5 /* ring.png */,
 				3D46798C1969E6D800B142B5 /* Spaceship.png */,
 				3D46798E1969E6D800B142B5 /* Images.xcassets */,
@@ -249,6 +252,7 @@
 				3D46798F1969E6D800B142B5 /* Images.xcassets in Resources */,
 				3D46798D1969E6D800B142B5 /* Spaceship.png in Resources */,
 				3D4679851969E6D800B142B5 /* Main.storyboard in Resources */,
+				3D4679AE196B071F00B142B5 /* push.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
