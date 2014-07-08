@@ -8,34 +8,27 @@
 
 #import "DHMyScene.h"
 
-@implementation DHMyScene
-
+@implementation DHMyScene{
+    NSMutableArray*rings;
+}
+static const uint32_t sprite1Category = 0x1 << 0;
+static const uint32_t sprite2Category = 0x1 << 1;
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
-        
+        rings=[[NSMutableArray alloc]init];
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         self.physicsWorld.gravity = CGVectorMake(+0.0f, -1.8f); // setting the gravity of the scene.
         [self setPhysicsBody:[SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame]];  //Physics body of Scene
         
         self.physicsWorld.contactDelegate =self;
-        
 
-
-//        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-//        
-//        myLabel.text = @"Hello, World!";
-//        myLabel.fontSize = 30;
-//        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-//                                       CGRectGetMidY(self.frame));
-//        
-//        [self addChild:myLabel];
-
-        
-        for (int count=0; count<10; count++) {
+        self.physicsBody.categoryBitMask = sprite1Category;
+        self.physicsBody.contactTestBitMask = sprite2Category;
+        for (int count=0; count<7; count++) {
             
             
-            
+            [rings addObject:[self setupRing:count]];
             [self addChild:[self setupRing:count]];
 
         }
@@ -55,12 +48,12 @@
     ring.physicsBody=[SKPhysicsBody bodyWithCircleOfRadius:ring.size.width/2]; // you can change the radius
     ring.physicsBody.dynamic = YES;
 
-    
-    ring.physicsBody.affectedByGravity=YES;
-    
     SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-    
-    [ring runAction:[SKAction repeatActionForever:action]];
+    [ring runAction:[SKAction repeatActionForever:action] withKey:@"Rotate"];
+    ring.physicsBody.affectedByGravity=YES;
+    ring.physicsBody.categoryBitMask = sprite2Category;
+    ring.physicsBody.contactTestBitMask = sprite1Category;
+
    
     return ring;
 }
@@ -99,25 +92,40 @@
     //if fire button touched, bring the rain
     if ([node.name isEqualToString:@"fireButtonNode"]) {
         //do whatever...
+        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
+       
+        for (int count=0; count<[rings count]; count++) {
+            [((SKSpriteNode *)[rings objectAtIndex:count]) runAction:[SKAction repeatActionForever:action] withKey:@"Rotate"];
+
+        }
+        
+        
         self.physicsWorld.gravity = CGVectorMake(+0.0f, +1.8f); // setting the gravity of the scene.
         [self setPhysicsBody:[SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame]];
         [self performSelector:@selector(resetGravity) withObject:nil afterDelay:1];
     }
 }
 -(void)resetGravity{
+    
     self.physicsWorld.gravity = CGVectorMake(+0.0f, -1.8f); // setting the gravity of the scene.
     [self setPhysicsBody:[SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame]];  //Physics body of Scene
 
 }
 - (void)didEndContact:(SKPhysicsContact *)contact{
-    SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-    
-    [contact.bodyA.node runAction:[SKAction repeatAction:action count:1]];
+   // [contact.bodyB.node removeActionForKey:@"Rotate"];
+
+
 }
 - (void)didBeginContact:(SKPhysicsContact *)contact{
-    SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
+    [contact.bodyB.node removeActionForKey:@"Rotate"];
+    [rings removeAllObjects];
+    for (int count=0; count<[rings count]; count++) {
+        [((SKSpriteNode *)[rings objectAtIndex:count]) removeActionForKey:@"Rotate"];
+        
+    }
+
+
     
-    [contact.bodyA.node runAction:[SKAction repeatAction:action count:1]];
 }
 
 @end
