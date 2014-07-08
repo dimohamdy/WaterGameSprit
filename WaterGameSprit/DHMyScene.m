@@ -10,6 +10,8 @@
 
 @implementation DHMyScene{
     NSMutableArray*rings;
+    NSMutableArray*tempRings;
+
 }
 static const uint32_t sprite1Category = 0x1 << 0;
 static const uint32_t sprite2Category = 0x1 << 1;
@@ -17,6 +19,7 @@ static const uint32_t sprite2Category = 0x1 << 1;
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         rings=[[NSMutableArray alloc]init];
+        tempRings=[[NSMutableArray alloc]init];
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         self.physicsWorld.gravity = CGVectorMake(+0.0f, -1.8f); // setting the gravity of the scene.
         [self setPhysicsBody:[SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame]];  //Physics body of Scene
@@ -35,6 +38,8 @@ static const uint32_t sprite2Category = 0x1 << 1;
         
         [self addChild:[self rightButtonNode]];
         [self addChild:[self leftButtonNode]];
+        [self addChild:[self setUpBasket]];
+
 
 
     }
@@ -53,7 +58,10 @@ static const uint32_t sprite2Category = 0x1 << 1;
     ring.physicsBody.affectedByGravity=YES;
     ring.physicsBody.categoryBitMask = sprite2Category;
     ring.physicsBody.contactTestBitMask = sprite1Category;
-
+    ring.physicsBody.mass = 1.0;
+    ring.physicsBody.angularDamping = 0.0+count;
+    ring.physicsBody.linearDamping = 0.0+count;
+    ring.physicsBody.friction = 0.0;
    
     return ring;
 }
@@ -81,7 +89,17 @@ static const uint32_t sprite2Category = 0x1 << 1;
     fireNode.zPosition = 1.0;
     return fireNode;
 }
-
+//Basket
+- (SKSpriteNode *)setUpBasket
+{
+    SKSpriteNode *basketNode = [SKSpriteNode spriteNodeWithImageNamed:@"basket"];
+    // fireNode.physicsBody=[SKPhysicsBody bodyWithCircleOfRadius:fireNode.size.width/2]; // you can change the radius
+    
+    basketNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    basketNode.name = @"fireButtonNode";//how the node is identified later
+    basketNode.zPosition = 1.0;
+    return basketNode;
+}
 ////handle touch events
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -92,14 +110,7 @@ static const uint32_t sprite2Category = 0x1 << 1;
     //if fire button touched, bring the rain
     if ([node.name isEqualToString:@"fireButtonNode"]) {
         //do whatever...
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
        
-        for (int count=0; count<[rings count]; count++) {
-            [((SKSpriteNode *)[rings objectAtIndex:count]) runAction:[SKAction repeatActionForever:action] withKey:@"Rotate"];
-
-        }
-        
-        
         self.physicsWorld.gravity = CGVectorMake(+0.0f, +1.8f); // setting the gravity of the scene.
         [self setPhysicsBody:[SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame]];
         [self performSelector:@selector(resetGravity) withObject:nil afterDelay:1];
@@ -112,20 +123,11 @@ static const uint32_t sprite2Category = 0x1 << 1;
 
 }
 - (void)didEndContact:(SKPhysicsContact *)contact{
-   // [contact.bodyB.node removeActionForKey:@"Rotate"];
-
 
 }
 - (void)didBeginContact:(SKPhysicsContact *)contact{
     [contact.bodyB.node removeActionForKey:@"Rotate"];
-    [rings removeAllObjects];
-    for (int count=0; count<[rings count]; count++) {
-        [((SKSpriteNode *)[rings objectAtIndex:count]) removeActionForKey:@"Rotate"];
-        
-    }
 
-
-    
 }
 
 @end

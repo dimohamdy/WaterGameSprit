@@ -26,6 +26,7 @@
 		3D4679A21969E6D800B142B5 /* WaterGameSpritTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4679A11969E6D800B142B5 /* WaterGameSpritTests.m */; };
 		3D4679AC1969E81900B142B5 /* ring.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4679AB1969E81900B142B5 /* ring.png */; };
 		3D4679AE196B071F00B142B5 /* push.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4679AD196B071F00B142B5 /* push.png */; };
+		3D4679B0196C857F00B142B5 /* basket.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4679AF196C857F00B142B5 /* basket.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		3D4679A11969E6D800B142B5 /* WaterGameSpritTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterGameSpritTests.m; sourceTree = "<group>"; };
 		3D4679AB1969E81900B142B5 /* ring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ring.png; sourceTree = "<group>"; };
 		3D4679AD196B071F00B142B5 /* push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push.png; sourceTree = "<group>"; };
+		3D4679AF196C857F00B142B5 /* basket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basket.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				3D4679871969E6D800B142B5 /* DHViewController.m */,
 				3D4679891969E6D800B142B5 /* DHMyScene.h */,
 				3D46798A1969E6D800B142B5 /* DHMyScene.m */,
+				3D4679AF196C857F00B142B5 /* basket.png */,
 				3D4679AD196B071F00B142B5 /* push.png */,
 				3D4679AB1969E81900B142B5 /* ring.png */,
 				3D46798C1969E6D800B142B5 /* Spaceship.png */,
@@ -247,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4679B0196C857F00B142B5 /* basket.png in Resources */,
 				3D46797C1969E6D800B142B5 /* InfoPlist.strings in Resources */,
 				3D4679AC1969E81900B142B5 /* ring.png in Resources */,
 				3D46798F1969E6D800B142B5 /* Images.xcassets in Resources */,
@@ -481,6 +485,7 @@
 				3D4679A71969E6D800B142B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D4679A81969E6D800B142B5 /* Build configuration list for PBXNativeTarget "WaterGameSpritTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +494,7 @@
 				3D4679AA1969E6D800B142B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
